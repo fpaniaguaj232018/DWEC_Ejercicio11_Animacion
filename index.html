@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Monkey Island</title>
+    <script>
+    var frame=0;
+    function iniciar(){
+        setInterval(function(){
+            mostrar(frame);
+            frame++;
+            if (frame==6) frame=0; 
+        }, 200);
+    }
+    function mostrar(id){
+        var elemento = document.getElementById("mono");
+        elemento.src = "images/step" + id + ".png";
+    }
+    </script>
+    
+</head>
+<body onload="iniciar()">
+    <H1>MONKEY ISLAND</H1>
+    <img id="mono" src="images/step0.png">
+</body>
+</html>
